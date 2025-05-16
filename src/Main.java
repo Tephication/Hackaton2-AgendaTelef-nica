@@ -157,7 +157,6 @@ public class Main extends JFrame {
         btn.setFont(new Font("Poppins", Font.BOLD, 14));
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
-//        btn.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
 
