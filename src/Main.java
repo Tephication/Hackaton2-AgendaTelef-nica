@@ -120,13 +120,20 @@ public class Main extends JFrame {
             String nombreS = nombre.getText();
             String apellidoS = apellido.getText();
 
-            for (Contacto c : agenda.getContactos()){
-                if (c.getNombre().equalsIgnoreCase(nombreS) && c.getApellido().equalsIgnoreCase(apellidoS)){
+            boolean encontrado = false;
+
+            for (Contacto c : agenda.getContactos()) {
+                if (c.getNombre().equalsIgnoreCase(nombreS) && c.getApellido().equalsIgnoreCase(apellidoS)) {
                     salida.setText("✅ Contacto encontrado, su teléfono es: " + c.getTelefono());
-                } else {
-                    salida.setText("❌ Este contacto no se ha encontrado");
+                    encontrado = true;
+                    break; // ya lo encontramos, salimos del bucle
                 }
             }
+
+            if (!encontrado) {
+                salida.setText("❌ Este contacto no se ha encontrado");
+            }
+
             nombre.setText("");
             apellido.setText("");
             telefono.setText("");

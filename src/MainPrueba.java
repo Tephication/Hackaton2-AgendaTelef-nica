@@ -94,12 +94,18 @@ public class MainPrueba {
                     System.out.println(" Ingresa el apellido que quieres buscar: ");
                     String apellidoS = scanner.nextLine();
 
-                    for (Contacto c : agenda.getContactos()){
-                        if (c.getNombre().equalsIgnoreCase(nombreS) && c.getApellido().equalsIgnoreCase(apellidoS)){
+                    boolean encontrado = false;
+
+                    for (Contacto c : agenda.getContactos()) {
+                        if (c.getNombre().equalsIgnoreCase(nombreS) && c.getApellido().equalsIgnoreCase(apellidoS)) {
                             System.out.println("✅ Contacto encontrado, su teléfono es: " + c.getTelefono());
-                        } else {
-                            System.out.println("❌ Este contacto no se ha encontrado");
+                            encontrado = true;
+                            break; // ya lo encontramos, salimos del bucle
                         }
+                    }
+
+                    if (!encontrado) {
+                        System.out.println("❌ Este contacto no se ha encontrado");
                     }
 
                 case 8:
