@@ -158,9 +158,6 @@ public class Main extends JFrame {
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-
-
-
     }
 
     //Punto de ejecución
