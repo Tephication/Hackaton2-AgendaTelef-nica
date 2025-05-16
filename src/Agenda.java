@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 
 public class Agenda {
-
+    //Atributos
     private ArrayList<Contacto> contactos;
     private int capacidad;
 
+    //Constructores
     public Agenda(int capacidad){
         this.capacidad = capacidad;
         this.contactos = new ArrayList<>();
@@ -13,6 +14,7 @@ public class Agenda {
     public Agenda(){
         this(10);
     }
+    //MÉTODOS
 
     public boolean agregarContacto( Contacto c){
         if (contactos.size() >= capacidad){

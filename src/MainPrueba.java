@@ -29,7 +29,7 @@ public class MainPrueba {
                     String apellido = scanner.nextLine();
                     System.out.println("Ingresa el teléfono ✏️: ");
                     String telefono = scanner.nextLine();
-                    // aqui va lo demás
+
 
 
                     if (nombre.isEmpty() || apellido.isEmpty()){

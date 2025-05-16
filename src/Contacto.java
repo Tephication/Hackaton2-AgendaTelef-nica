@@ -1,8 +1,10 @@
 public class Contacto {
+    //Atributos
     private String nombre;
     private String apellido;
     private String telefono;
 
+    //Constructores
     public Contacto() {
     }
 
@@ -11,6 +13,8 @@ public class Contacto {
         this.apellido = apellido;
         this.telefono = telefono;
     }
+
+    //Getters and Setters
     public String getNombre() {
         return nombre;
     }
@@ -35,7 +39,7 @@ public class Contacto {
         this.telefono = telefono;
     }
 
-    /* revisar por si tocar hacer overide con algun metodo de la clase agenda o main*/
+    //MÉTODOS
 
     @Override
     public boolean equals(Object obj) {
@@ -46,21 +50,10 @@ public class Contacto {
         return false;
     }
 
-
-
     @Override
     public String toString() {
         return "Nombre: " + nombre+   "  --  " + "Apellido: " + apellido +   "  --  " + "Teléfono: " + telefono;
     }
-
-    /* revisar si esto se debe volver override
-
-     */
-
-
-
-
-
 
     }
 
